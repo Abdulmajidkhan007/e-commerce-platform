@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { selectUser, selectIsAdmin } from "@/features/auth/authSlice";
 import { toggleMobileNav, selectIsMobileNavOpen, closeMobileNav } from "@/features/ui/uiSlice";
+import { useAuth } from "@/features/auth/hooks/useAuth";
 import { PATHS } from "@/routes/paths";
 import { Container } from "./Container";
 import { ThemeToggle } from "./ThemeToggle";
@@ -25,6 +27,8 @@ export function Navbar() {
   const user = useAppSelector(selectUser);
   const isAdmin = useAppSelector(selectIsAdmin);
   const isMobileNavOpen = useAppSelector(selectIsMobileNavOpen);
+  const { logout } = useAuth();
+  const [showUserMenu, setShowUserMenu] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-cream-dark dark:border-ink-light/20 bg-cream/90 dark:bg-ink/90 backdrop-blur-sm">
@@ -80,18 +84,62 @@ export function Navbar() {
             <CartButton />
 
             {user ? (
-              <Link
-                to={PATHS.PROFILE}
-                className="ml-1"
-                aria-label={t("nav.profile")}
-              >
-                <Avatar
-                  src={user.photoURL}
-                  firstName={user.displayName?.split(" ")[0] ?? ""}
-                  lastName={user.displayName?.split(" ")[1] ?? ""}
-                  size="sm"
-                />
-              </Link>
+              <div className="relative ml-1">
+                <button
+                  onClick={() => setShowUserMenu((v) => !v)}
+                  aria-label={t("nav.profile")}
+                  aria-expanded={showUserMenu}
+                  className="rounded-full"
+                >
+                  <Avatar
+                    src={user.photoURL}
+                    firstName={user.displayName?.split(" ")[0] ?? ""}
+                    lastName={user.displayName?.split(" ")[1] ?? ""}
+                    size="sm"
+                  />
+                </button>
+
+                {showUserMenu && (
+                  <>
+                    <div
+                      className="fixed inset-0 z-40"
+                      onClick={() => setShowUserMenu(false)}
+                    />
+                    <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-ink border border-cream-dark dark:border-ink-light/40 rounded-card shadow-elevated z-50 py-1">
+                      <Link
+                        to={PATHS.PROFILE}
+                        onClick={() => setShowUserMenu(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-ink dark:text-cream hover:bg-brand-50 dark:hover:bg-brand-900/20"
+                      >
+                        👤 {t("nav.profile")}
+                      </Link>
+                      <Link
+                        to={PATHS.PROFILE_ORDERS}
+                        onClick={() => setShowUserMenu(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-ink dark:text-cream hover:bg-brand-50 dark:hover:bg-brand-900/20"
+                      >
+                        📦 {t("nav.orders")}
+                      </Link>
+                      {isAdmin && (
+                        <Link
+                          to={PATHS.ADMIN}
+                          onClick={() => setShowUserMenu(false)}
+                          className="flex items-center gap-2 px-4 py-2 text-sm text-brand-600 hover:bg-brand-50 dark:hover:bg-brand-900/20"
+                        >
+                          ⚙️ {t("nav.admin")}
+                        </Link>
+                      )}
+                      <div className="my-1 border-t border-cream-dark dark:border-ink-light/30" />
+                      <button
+                        onClick={async () => { setShowUserMenu(false); await logout(); }}
+                        className="w-full flex items-center gap-2 px-4 py-2 text-sm text-error hover:bg-red-50 dark:hover:bg-red-900/20 text-left"
+                      >
+                        🚪 {t("nav.logout")}
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
             ) : (
               <Link
                 to={PATHS.LOGIN}

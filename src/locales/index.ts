@@ -6,12 +6,20 @@ import uzCommon from "./uz/common.json";
 import enCommon from "./en/common.json";
 import ruCommon from "./ru/common.json";
 
+import uzAuth from "./uz/auth.json";
+import enAuth from "./en/auth.json";
+import ruAuth from "./ru/auth.json";
+
+import uzProfile from "./uz/profile.json";
+import enProfile from "./en/profile.json";
+import ruProfile from "./ru/profile.json";
+
 export const defaultNS = "common";
 
 export const resources = {
-  uz: { common: uzCommon },
-  en: { common: enCommon },
-  ru: { common: ruCommon },
+  uz: { common: uzCommon, auth: uzAuth, profile: uzProfile },
+  en: { common: enCommon, auth: enAuth, profile: enProfile },
+  ru: { common: ruCommon, auth: ruAuth, profile: ruProfile },
 } as const;
 
 i18n

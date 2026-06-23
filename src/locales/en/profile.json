@@ -1,0 +1,40 @@
+{
+  "title": "My Profile",
+  "editTitle": "Edit Profile",
+  "ordersTitle": "My Orders",
+  "fields": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phone": "Phone number",
+    "birthYear": "Birth year",
+    "bio": "About you",
+    "avatar": "Profile photo",
+    "address": "Address",
+    "addressLine1": "Street, house number",
+    "city": "City",
+    "region": "Region",
+    "addressNotes": "Additional notes"
+  },
+  "avatar": {
+    "change": "Change photo",
+    "remove": "Remove",
+    "hint": "JPG, PNG or WebP, max 5MB",
+    "uploading": "Uploading..."
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit"
+  },
+  "location": {
+    "use": "Use my location",
+    "using": "Detecting location...",
+    "success": "Location detected",
+    "denied": "Location access denied"
+  },
+  "success": "Profile updated successfully!",
+  "saveToProfile": "Save to profile",
+  "noOrders": "No orders yet",
+  "noOrdersDesc": "Make your first purchase from our store!"
+}

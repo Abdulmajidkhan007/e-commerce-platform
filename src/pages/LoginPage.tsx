@@ -1,14 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { Seo } from "@/components/seo/Seo";
-import { Card } from "@/components/ui/Card";
+import { AuthForm } from "@/features/auth/components/AuthForm";
 
 export default function LoginPage() {
+  const { t } = useTranslation("auth");
+
   return (
     <>
-      <Seo title="Login" noIndex />
-      <Card>
-        <h2 className="text-xl font-bold text-ink dark:text-cream mb-4">Login</h2>
-        <p className="text-ink-light text-sm">Bu sahifa tez orada tayyorlanadi...</p>
-      </Card>
+      <Seo title={t("login.title")} noIndex />
+      <AuthForm mode="login" />
     </>
   );
 }

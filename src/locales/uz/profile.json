@@ -1,0 +1,40 @@
+{
+  "title": "Mening profilim",
+  "editTitle": "Profilni tahrirlash",
+  "ordersTitle": "Mening buyurtmalarim",
+  "fields": {
+    "firstName": "Ism",
+    "lastName": "Familiya",
+    "email": "Email",
+    "phone": "Telefon raqam",
+    "birthYear": "Tug'ilgan yil",
+    "bio": "O'zingiz haqingizda",
+    "avatar": "Profil rasmi",
+    "address": "Manzil",
+    "addressLine1": "Ko'cha, uy raqami",
+    "city": "Shahar",
+    "region": "Viloyat/Tuman",
+    "addressNotes": "Qo'shimcha izoh"
+  },
+  "avatar": {
+    "change": "Rasmni o'zgartirish",
+    "remove": "Olib tashlash",
+    "hint": "JPG, PNG yoki WebP, max 5MB",
+    "uploading": "Yuklanmoqda..."
+  },
+  "actions": {
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "edit": "Tahrirlash"
+  },
+  "location": {
+    "use": "Joylashuvdan foydalanish",
+    "using": "Joylashuv aniqlanmoqda...",
+    "success": "Joylashuv aniqlandi",
+    "denied": "Joylashuvga ruxsat berilmagan"
+  },
+  "success": "Profil muvaffaqiyatli yangilandi!",
+  "saveToProfile": "Ma'lumotlarni profilga saqlash",
+  "noOrders": "Hali buyurtmalar yo'q",
+  "noOrdersDesc": "Do'konimizdan birinchi xaridingizni qiling!"
+}
