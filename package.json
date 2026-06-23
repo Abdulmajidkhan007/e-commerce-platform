@@ -1,9 +1,8 @@
 {
-  "name": "e-commerce-platform",
+  "name": "kidswear",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "name": "kidswear",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -16,7 +15,11 @@
     "webhook:info": "node scripts/register-webhook.mjs --info",
     "webhook:delete": "node scripts/register-webhook.mjs --delete",
     "functions:build": "npm --prefix functions run build",
-    "functions:typecheck": "npm --prefix functions run typecheck"
+    "functions:typecheck": "npm --prefix functions run typecheck",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:rules": "firebase deploy --only firestore:rules,firestore:indexes,storage"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
