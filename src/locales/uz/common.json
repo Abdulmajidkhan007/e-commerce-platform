@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "KidsWear",
+    "tagline": "Bolalar kiyimlari uchun eng yaxshi tanlov"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "shop": "Do'kon",
+    "blog": "Blog",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "cart": "Savatcha",
+    "profile": "Profil",
+    "orders": "Buyurtmalar",
+    "admin": "Admin panel",
+    "login": "Kirish",
+    "signup": "Ro'yxatdan o'tish",
+    "logout": "Chiqish"
+  },
+  "categories": {
+    "tops": "Yuqori kiyimlar",
+    "bottoms": "Pastki kiyimlar",
+    "dresses": "Ko'ylaklar",
+    "outerwear": "Ustki kiyimlar",
+    "sleepwear": "Uyqu kiyimlari",
+    "underwear": "Ichki kiyimlar",
+    "swimwear": "Suzish kiyimlari",
+    "accessories": "Aksessuarlar",
+    "shoes": "Poyabzallar",
+    "sets": "To'plamlar"
+  },
+  "order": {
+    "status": {
+      "pending": "Kutilmoqda",
+      "confirmed": "Tasdiqlangan",
+      "packing": "Qadoqlanmoqda",
+      "shipped": "Jo'natilgan",
+      "delivered": "Yetkazilgan",
+      "cancelled": "Bekor qilingan"
+    }
+  },
+  "payment": {
+    "cash": "Naqd pul (yetkazganda)",
+    "partial_online": "50% oldindan (onlayn)",
+    "status": {
+      "unpaid": "To'lanmagan",
+      "deposit_paid": "Avans to'langan",
+      "paid": "To'liq to'langan"
+    }
+  },
+  "btn": {
+    "addToCart": "Savatga qo'shish",
+    "buyNow": "Hozir sotib olish",
+    "checkout": "Buyurtma berish",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "submit": "Yuborish",
+    "loading": "Yuklanmoqda...",
+    "viewAll": "Hammasini ko'rish",
+    "seeMore": "Ko'proq ko'rish"
+  },
+  "errors": {
+    "generic": "Xatolik yuz berdi. Iltimos qayta urinib ko'ring.",
+    "notFound": "Sahifa topilmadi",
+    "unauthorized": "Ruxsat yo'q",
+    "networkError": "Internet aloqasi yo'q"
+  },
+  "theme": {
+    "light": "Yorug' rejim",
+    "dark": "Tungi rejim"
+  },
+  "lang": {
+    "uz": "O'zbek",
+    "en": "English",
+    "ru": "Русский"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "KidsWear",
+    "tagline": "The best choice for children's clothing"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "profile": "Profile",
+    "orders": "Orders",
+    "admin": "Admin panel",
+    "login": "Login",
+    "signup": "Sign up",
+    "logout": "Logout"
+  },
+  "categories": {
+    "tops": "Tops",
+    "bottoms": "Bottoms",
+    "dresses": "Dresses",
+    "outerwear": "Outerwear",
+    "sleepwear": "Sleepwear",
+    "underwear": "Underwear",
+    "swimwear": "Swimwear",
+    "accessories": "Accessories",
+    "shoes": "Shoes",
+    "sets": "Sets"
+  },
+  "order": {
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "packing": "Packing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    }
+  },
+  "payment": {
+    "cash": "Cash on delivery",
+    "partial_online": "50% upfront (online)",
+    "status": {
+      "unpaid": "Unpaid",
+      "deposit_paid": "Deposit paid",
+      "paid": "Fully paid"
+    }
+  },
+  "btn": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "checkout": "Checkout",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "viewAll": "View all",
+    "seeMore": "See more"
+  },
+  "errors": {
+    "generic": "An error occurred. Please try again.",
+    "notFound": "Page not found",
+    "unauthorized": "Not authorized",
+    "networkError": "No internet connection"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "lang": {
+    "uz": "O'zbek",
+    "en": "English",
+    "ru": "Русский"
+  }
+}
