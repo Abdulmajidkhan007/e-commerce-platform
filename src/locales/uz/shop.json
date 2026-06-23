@@ -1,0 +1,62 @@
+{
+  "title": "Do'kon",
+  "filters": {
+    "title": "Filterlar",
+    "clear": "Tozalash",
+    "category": "Kategoriya",
+    "size": "O'lcham",
+    "audience": "Kimga",
+    "sort": "Saralash",
+    "all": "Barchasi"
+  },
+  "sort": {
+    "new": "Yangi",
+    "popular": "Mashhur",
+    "price_asc": "Narx: pastdan",
+    "price_desc": "Narx: yuqoridan",
+    "rating": "Reyting"
+  },
+  "audience": {
+    "boys": "O'g'il bolalar",
+    "girls": "Qiz bolalar",
+    "unisex": "Ikkala jinsdagi"
+  },
+  "noResults": "Mahsulot topilmadi",
+  "noResultsDesc": "Filterlarni o'zgartirib ko'ring",
+  "loadMore": "Ko'proq yuklash",
+  "loading": "Yuklanmoqda...",
+  "resultsCount": "{{count}} ta mahsulot topildi",
+  "search": "Mahsulot qidirish...",
+  "product": {
+    "inStock": "Mavjud",
+    "outOfStock": "Tugagan",
+    "lowStock": "Oz qoldi ({{count}} dona)",
+    "sku": "SKU",
+    "addToCart": "Savatga qo'shish",
+    "buyNow": "Hozir sotib olish",
+    "selectColor": "Rang tanlang",
+    "selectSize": "O'lcham tanlang",
+    "qty": "Miqdor",
+    "reviews": "Sharhlar",
+    "noReviews": "Hali sharh yo'q",
+    "related": "O'xshash mahsulotlar",
+    "rating": "Reyting",
+    "soldCount": "{{count}} dona sotilgan",
+    "description": "Tavsif",
+    "share": "Ulashish",
+    "wishlist": "Sevimlilarga qo'shish",
+    "discount": "Chegirma",
+    "originalPrice": "Asl narx",
+    "discountPercent": "{{percent}}% chegirma"
+  },
+  "review": {
+    "title": "Sharh qoldiring",
+    "rating": "Baho",
+    "comment": "Fikringiz",
+    "submit": "Sharh yuborish",
+    "loginRequired": "Sharh qoldirish uchun tizimga kiring",
+    "alreadyReviewed": "Siz allaqachon sharh qoldirdingiz",
+    "success": "Sharh muvaffaqiyatli qo'shildi",
+    "placeholder": "Mahsulot haqida fikringizni yozing..."
+  }
+}

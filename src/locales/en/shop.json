@@ -1,0 +1,62 @@
+{
+  "title": "Shop",
+  "filters": {
+    "title": "Filters",
+    "clear": "Clear",
+    "category": "Category",
+    "size": "Size",
+    "audience": "For",
+    "sort": "Sort by",
+    "all": "All"
+  },
+  "sort": {
+    "new": "Newest",
+    "popular": "Popular",
+    "price_asc": "Price: Low to High",
+    "price_desc": "Price: High to Low",
+    "rating": "Top Rated"
+  },
+  "audience": {
+    "boys": "Boys",
+    "girls": "Girls",
+    "unisex": "Unisex"
+  },
+  "noResults": "No products found",
+  "noResultsDesc": "Try changing the filters",
+  "loadMore": "Load More",
+  "loading": "Loading...",
+  "resultsCount": "{{count}} products found",
+  "search": "Search products...",
+  "product": {
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "lowStock": "Low Stock ({{count}} left)",
+    "sku": "SKU",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "selectColor": "Select Color",
+    "selectSize": "Select Size",
+    "qty": "Quantity",
+    "reviews": "Reviews",
+    "noReviews": "No reviews yet",
+    "related": "Related Products",
+    "rating": "Rating",
+    "soldCount": "{{count}} sold",
+    "description": "Description",
+    "share": "Share",
+    "wishlist": "Add to Wishlist",
+    "discount": "Discount",
+    "originalPrice": "Original Price",
+    "discountPercent": "{{percent}}% off"
+  },
+  "review": {
+    "title": "Write a Review",
+    "rating": "Rating",
+    "comment": "Comment",
+    "submit": "Submit Review",
+    "loginRequired": "Please log in to write a review",
+    "alreadyReviewed": "You have already reviewed this product",
+    "success": "Review submitted successfully",
+    "placeholder": "Share your thoughts about this product..."
+  }
+}

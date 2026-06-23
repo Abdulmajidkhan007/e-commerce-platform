@@ -30,6 +30,7 @@ function Lazy({ component: Component }: { component: React.LazyExoticComponent<R
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const ShopPage = lazy(() => import("@/pages/ShopPage"));
+const ProductDetailPage = lazy(() => import("@/pages/ProductDetailPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const CartPage = lazy(() => import("@/pages/CartPage"));
@@ -51,7 +52,7 @@ export const router = createBrowserRouter([
       { path: PATHS.HOME, element: <Lazy component={HomePage} /> },
       { path: PATHS.ABOUT, element: <Lazy component={AboutPage} /> },
       { path: PATHS.SHOP, element: <Lazy component={ShopPage} /> },
-      { path: PATHS.PRODUCT_PATTERN, element: <Lazy component={ShopPage} /> },
+      { path: PATHS.PRODUCT_PATTERN, element: <Lazy component={ProductDetailPage} /> },
       { path: PATHS.BLOG, element: <Lazy component={BlogPage} /> },
       { path: PATHS.BLOG_POST_PATTERN, element: <Lazy component={BlogPage} /> },
       { path: PATHS.CONTACT, element: <Lazy component={ContactPage} /> },

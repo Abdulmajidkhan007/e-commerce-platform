@@ -14,12 +14,16 @@ import uzProfile from "./uz/profile.json";
 import enProfile from "./en/profile.json";
 import ruProfile from "./ru/profile.json";
 
+import uzShop from "./uz/shop.json";
+import enShop from "./en/shop.json";
+import ruShop from "./ru/shop.json";
+
 export const defaultNS = "common";
 
 export const resources = {
-  uz: { common: uzCommon, auth: uzAuth, profile: uzProfile },
-  en: { common: enCommon, auth: enAuth, profile: enProfile },
-  ru: { common: ruCommon, auth: ruAuth, profile: ruProfile },
+  uz: { common: uzCommon, auth: uzAuth, profile: uzProfile, shop: uzShop },
+  en: { common: enCommon, auth: enAuth, profile: enProfile, shop: enShop },
+  ru: { common: ruCommon, auth: ruAuth, profile: ruProfile, shop: ruShop },
 } as const;
 
 i18n

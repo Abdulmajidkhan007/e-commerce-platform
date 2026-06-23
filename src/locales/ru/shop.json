@@ -1,0 +1,62 @@
+{
+  "title": "Магазин",
+  "filters": {
+    "title": "Фильтры",
+    "clear": "Сбросить",
+    "category": "Категория",
+    "size": "Размер",
+    "audience": "Для кого",
+    "sort": "Сортировка",
+    "all": "Все"
+  },
+  "sort": {
+    "new": "Новые",
+    "popular": "Популярные",
+    "price_asc": "Цена: по возрастанию",
+    "price_desc": "Цена: по убыванию",
+    "rating": "По рейтингу"
+  },
+  "audience": {
+    "boys": "Мальчики",
+    "girls": "Девочки",
+    "unisex": "Унисекс"
+  },
+  "noResults": "Товары не найдены",
+  "noResultsDesc": "Попробуйте изменить фильтры",
+  "loadMore": "Загрузить ещё",
+  "loading": "Загрузка...",
+  "resultsCount": "Найдено {{count}} товаров",
+  "search": "Поиск товаров...",
+  "product": {
+    "inStock": "В наличии",
+    "outOfStock": "Нет в наличии",
+    "lowStock": "Мало осталось ({{count}} шт.)",
+    "sku": "Артикул",
+    "addToCart": "В корзину",
+    "buyNow": "Купить сейчас",
+    "selectColor": "Выберите цвет",
+    "selectSize": "Выберите размер",
+    "qty": "Количество",
+    "reviews": "Отзывы",
+    "noReviews": "Пока нет отзывов",
+    "related": "Похожие товары",
+    "rating": "Рейтинг",
+    "soldCount": "Продано {{count}} шт.",
+    "description": "Описание",
+    "share": "Поделиться",
+    "wishlist": "В избранное",
+    "discount": "Скидка",
+    "originalPrice": "Исходная цена",
+    "discountPercent": "Скидка {{percent}}%"
+  },
+  "review": {
+    "title": "Написать отзыв",
+    "rating": "Оценка",
+    "comment": "Комментарий",
+    "submit": "Отправить отзыв",
+    "loginRequired": "Войдите, чтобы написать отзыв",
+    "alreadyReviewed": "Вы уже оставили отзыв",
+    "success": "Отзыв успешно добавлен",
+    "placeholder": "Поделитесь мнением о товаре..."
+  }
+}
