@@ -1,0 +1,26 @@
+{
+  "name": "kidswear-functions",
+  "private": true,
+  "version": "1.0.0",
+  "description": "KidsWear Firebase Cloud Functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^7.0.0",
+    "grammy": "^1.37.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^6.0.3"
+  }
+}

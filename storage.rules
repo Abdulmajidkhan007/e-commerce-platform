@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuth() && request.auth.token.role == 'admin';
+    }
+
+    function isImage() {
+      return request.resource.contentType.matches('image/.*');
+    }
+
+    function isUnder5MB() {
+      return request.resource.size < 5 * 1024 * 1024;
+    }
+
+    // ---- Mahsulot rasmlari ----
+    // O'qish — hamma
+    // Yozish — faqat admin
+    match /product-images/{productId}/{fileName} {
+      allow read: if true;
+      allow write: if isAdmin() && isImage() && isUnder5MB();
+      allow delete: if isAdmin();
+    }
+
+    // ---- Foydalanuvchi avatarlari ----
+    // O'qish — hamma
+    // Yozish — faqat o'zi
+    match /avatars/{uid}.webp {
+      allow read: if true;
+      allow write: if isAuth()
+        && request.auth.uid == uid
+        && isImage()
+        && isUnder5MB();
+      allow delete: if isAuth() && request.auth.uid == uid;
+    }
+  }
+}

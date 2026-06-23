@@ -1,0 +1,123 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- Yordamchi funksiyalar ----
+
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isAuth() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isAuth() && request.auth.token.role == 'admin';
+    }
+
+    function isValidTimestamp(field) {
+      return field is timestamp;
+    }
+
+    // ---- users/{uid} ----
+    match /users/{uid} {
+      // Faqat o'z profilini o'qish mumkin yoki admin
+      allow read: if isOwner(uid) || isAdmin();
+
+      // Yangi hujjat yaratish — faqat o'zi
+      allow create: if isOwner(uid)
+        && request.resource.data.uid == uid
+        && request.resource.data.role == 'user'  // Client 'admin' o'rnatib bilmaydi
+        && isValidTimestamp(request.resource.data.createdAt)
+        && isValidTimestamp(request.resource.data.updatedAt);
+
+      // Yangilash — o'zi yoki admin
+      // role maydoni o'zgartirib bo'lmaydi (faqat Functions orqali)
+      allow update: if (isOwner(uid) || isAdmin())
+        && request.resource.data.role == resource.data.role  // role o'zgarmasin
+        && request.resource.data.uid == resource.data.uid;  // uid o'zgarmasin
+
+      allow delete: if isAdmin();
+    }
+
+    // ---- products/{productId} ----
+    match /products/{productId} {
+      // Aktiv mahsulotlarni hamma o'qiy oladi
+      allow read: if resource.data.isActive == true || isAdmin();
+
+      // Faqat admin yozishi mumkin
+      allow write: if isAdmin();
+
+      // ---- products/{productId}/reviews/{reviewId} ----
+      match /reviews/{reviewId} {
+        // Hamma o'qiy oladi
+        allow read: if true;
+
+        // Faqat autentifikatsiyalangan foydalanuvchi yozishi mumkin
+        allow create: if isAuth()
+          && request.resource.data.userId == request.auth.uid
+          && request.resource.data.rating >= 1
+          && request.resource.data.rating <= 5
+          && request.resource.data.comment.size() <= 500;
+
+        // O'z sharhini yangilash
+        allow update: if isAuth()
+          && resource.data.userId == request.auth.uid;
+
+        // O'z sharhini o'chirish yoki admin
+        allow delete: if isAuth()
+          && (resource.data.userId == request.auth.uid || isAdmin());
+      }
+    }
+
+    // ---- orders/{orderId} ----
+    match /orders/{orderId} {
+      // O'z buyurtmasini o'qish yoki admin
+      allow read: if isAuth()
+        && (resource.data.userId == request.auth.uid || isAdmin());
+
+      // Yangi buyurtma yaratish — autentifikatsiyalangan va o'z nomidan
+      allow create: if isAuth()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.total > 0
+        && isValidTimestamp(request.resource.data.createdAt)
+        && isValidTimestamp(request.resource.data.updatedAt);
+
+      // Buyurtmani yangilash — faqat admin (status o'zgartirish)
+      allow update: if isAdmin();
+
+      // O'chirish — faqat admin
+      allow delete: if isAdmin();
+    }
+
+    // ---- blogPosts/{postId} ----
+    match /blogPosts/{postId} {
+      // Nashr etilgan postlarni hamma o'qiy oladi
+      allow read: if resource.data.isPublished == true || isAdmin();
+
+      // Faqat admin yozishi mumkin
+      allow write: if isAdmin();
+    }
+
+    // ---- contactMessages/{id} ----
+    match /contactMessages/{id} {
+      // Hamma xabar yuborishi mumkin
+      allow create: if request.resource.data.message.size() <= 2000
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.email is string;
+
+      // Faqat admin o'qiy oladi
+      allow read, update, delete: if isAdmin();
+    }
+
+    // ---- stats/{doc} ----
+    match /stats/{document=**} {
+      // Faqat admin o'qiy oladi va Functions yozadi
+      allow read: if isAdmin();
+      allow write: if false;  // Faqat server (Functions) yoza oladi
+    }
+  }
+}
