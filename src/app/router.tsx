@@ -43,8 +43,10 @@ const SignupPage = lazy(() => import("@/pages/SignupPage"));
 
 const AdminDashboardPage = lazy(() => import("@/pages/admin/DashboardPage"));
 const AdminProductsPage = lazy(() => import("@/pages/admin/ProductsPage"));
+const AdminProductFormPage = lazy(() => import("@/pages/admin/ProductFormPage"));
 const AdminOrdersPage = lazy(() => import("@/pages/admin/OrdersPage"));
 const AdminBlogPage = lazy(() => import("@/pages/admin/BlogAdminPage"));
+const AdminBlogFormPage = lazy(() => import("@/pages/admin/BlogFormPage"));
 
 export const router = createBrowserRouter([
   {
@@ -130,8 +132,12 @@ export const router = createBrowserRouter([
     children: [
       { path: PATHS.ADMIN, element: <Lazy component={AdminDashboardPage} /> },
       { path: PATHS.ADMIN_PRODUCTS, element: <Lazy component={AdminProductsPage} /> },
+      { path: PATHS.ADMIN_PRODUCT_NEW, element: <Lazy component={AdminProductFormPage} /> },
+      { path: PATHS.ADMIN_PRODUCT_EDIT_PATTERN, element: <Lazy component={AdminProductFormPage} /> },
       { path: PATHS.ADMIN_ORDERS, element: <Lazy component={AdminOrdersPage} /> },
       { path: PATHS.ADMIN_BLOG, element: <Lazy component={AdminBlogPage} /> },
+      { path: PATHS.ADMIN_BLOG_NEW, element: <Lazy component={AdminBlogFormPage} /> },
+      { path: PATHS.ADMIN_BLOG_EDIT_PATTERN, element: <Lazy component={AdminBlogFormPage} /> },
     ],
   },
   {
