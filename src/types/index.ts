@@ -107,6 +107,7 @@ export interface OrderCustomer {
   lastName: string;
   phone: string;
   address: string;
+  notes?: string | null;
   location?: { lat: number; lng: number } | null;
 }
 

@@ -81,7 +81,7 @@ export function Navbar() {
           <div className="flex items-center gap-1">
             <LanguageSwitcher className="hidden sm:flex" />
             <ThemeToggle />
-            <CartButton />
+            <CartButton asLink />
 
             {user ? (
               <div className="relative ml-1">

@@ -1,0 +1,54 @@
+{
+  "title": "Корзина",
+  "empty": "Корзина пуста",
+  "emptyDesc": "Добавьте товары в корзину",
+  "continueShopping": "Продолжить покупки",
+  "clear": "Очистить корзину",
+  "summary": "Сводка заказа",
+  "subtotal": "Сумма товаров",
+  "shipping": "Доставка",
+  "shippingFree": "Бесплатно",
+  "total": "Итого",
+  "freeShippingHint": "Бесплатная доставка при заказе от {{threshold}}",
+  "checkout": "Оформить заказ",
+  "item": "{{count}} товаров",
+  "removeItem": "Удалить",
+  "qty": "Количество",
+  "checkout_page": {
+    "title": "Оформление заказа",
+    "personalInfo": "Личные данные",
+    "deliveryInfo": "Информация о доставке",
+    "paymentMethod": "Способ оплаты",
+    "cash": "Наличными при доставке",
+    "cashDesc": "Оплата при получении заказа",
+    "partial_online": "50% предоплата",
+    "partial_onlineDesc": "Оплатите 50% онлайн, остаток при доставке",
+    "depositAmount": "Оплатить сейчас: {{amount}}",
+    "dueOnDelivery": "При получении: {{amount}}",
+    "submit": "Подтвердить заказ",
+    "fields": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "phone": "Номер телефона",
+      "address": "Полный адрес",
+      "notes": "Примечания к доставке (необязательно)"
+    }
+  },
+  "success": {
+    "title": "Заказ принят!",
+    "desc": "Мы свяжемся с вами для подтверждения заказа.",
+    "orderId": "Номер заказа",
+    "viewOrders": "Мои заказы",
+    "continueShopping": "Продолжить покупки"
+  },
+  "orders": {
+    "title": "Мои заказы",
+    "empty": "Заказов пока нет",
+    "emptyDesc": "Сделайте первый заказ!",
+    "orderNum": "Заказ #{{id}}",
+    "date": "Дата",
+    "status": "Статус",
+    "total": "Итого",
+    "items": "{{count}} товаров"
+  }
+}

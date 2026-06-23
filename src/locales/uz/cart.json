@@ -1,0 +1,54 @@
+{
+  "title": "Savatcha",
+  "empty": "Savatcha bo'sh",
+  "emptyDesc": "Mahsulotlarni savatga qo'shing",
+  "continueShopping": "Xaridni davom ettirish",
+  "clear": "Savatchani tozalash",
+  "summary": "Buyurtma xulosasi",
+  "subtotal": "Jami (tovarlar)",
+  "shipping": "Yetkazib berish",
+  "shippingFree": "Bepul",
+  "total": "Umumiy jami",
+  "freeShippingHint": "{{threshold}} so'mdan yuqori buyurtmada yetkazib berish bepul",
+  "checkout": "Buyurtma berish",
+  "item": "{{count}} ta mahsulot",
+  "removeItem": "O'chirish",
+  "qty": "Miqdor",
+  "checkout_page": {
+    "title": "Buyurtma",
+    "personalInfo": "Shaxsiy ma'lumotlar",
+    "deliveryInfo": "Yetkazib berish ma'lumotlari",
+    "paymentMethod": "To'lov usuli",
+    "cash": "Naqd pul (yetkazganda)",
+    "cashDesc": "Kuryer yetkazganda to'laysiz",
+    "partial_online": "50% oldindan to'lash",
+    "partial_onlineDesc": "Jami summasining 50% ini hozir to'lang, qolganini yetkazganda",
+    "depositAmount": "Hozir to'lanadigan summa: {{amount}} so'm",
+    "dueOnDelivery": "Yetkazganda to'lanadigan: {{amount}} so'm",
+    "submit": "Buyurtmani tasdiqlash",
+    "fields": {
+      "firstName": "Ism",
+      "lastName": "Familiya",
+      "phone": "Telefon raqami",
+      "address": "To'liq manzil",
+      "notes": "Qo'shimcha izoh (ixtiyoriy)"
+    }
+  },
+  "success": {
+    "title": "Buyurtmangiz qabul qilindi!",
+    "desc": "Tez orada siz bilan bog'lanamiz va buyurtmangizni tasdiqlaymiz.",
+    "orderId": "Buyurtma raqami",
+    "viewOrders": "Buyurtmalarimni ko'rish",
+    "continueShopping": "Xaridni davom ettirish"
+  },
+  "orders": {
+    "title": "Mening buyurtmalarim",
+    "empty": "Hali buyurtmalar yo'q",
+    "emptyDesc": "Birinchi buyurtmangizni bering!",
+    "orderNum": "Buyurtma #{{id}}",
+    "date": "Sana",
+    "status": "Holat",
+    "total": "Jami",
+    "items": "{{count}} ta mahsulot"
+  }
+}

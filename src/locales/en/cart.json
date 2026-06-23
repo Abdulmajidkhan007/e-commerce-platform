@@ -1,0 +1,54 @@
+{
+  "title": "Shopping Cart",
+  "empty": "Your cart is empty",
+  "emptyDesc": "Add products to your cart",
+  "continueShopping": "Continue Shopping",
+  "clear": "Clear Cart",
+  "summary": "Order Summary",
+  "subtotal": "Subtotal",
+  "shipping": "Shipping",
+  "shippingFree": "Free",
+  "total": "Total",
+  "freeShippingHint": "Free shipping on orders over {{threshold}}",
+  "checkout": "Proceed to Checkout",
+  "item": "{{count}} items",
+  "removeItem": "Remove",
+  "qty": "Quantity",
+  "checkout_page": {
+    "title": "Checkout",
+    "personalInfo": "Personal Information",
+    "deliveryInfo": "Delivery Information",
+    "paymentMethod": "Payment Method",
+    "cash": "Cash on Delivery",
+    "cashDesc": "Pay when your order arrives",
+    "partial_online": "50% Upfront Payment",
+    "partial_onlineDesc": "Pay 50% now online, rest on delivery",
+    "depositAmount": "Pay now: {{amount}}",
+    "dueOnDelivery": "Due on delivery: {{amount}}",
+    "submit": "Place Order",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "address": "Full Address",
+      "notes": "Delivery Notes (optional)"
+    }
+  },
+  "success": {
+    "title": "Order Placed Successfully!",
+    "desc": "We will contact you soon to confirm your order.",
+    "orderId": "Order ID",
+    "viewOrders": "View My Orders",
+    "continueShopping": "Continue Shopping"
+  },
+  "orders": {
+    "title": "My Orders",
+    "empty": "No orders yet",
+    "emptyDesc": "Place your first order!",
+    "orderNum": "Order #{{id}}",
+    "date": "Date",
+    "status": "Status",
+    "total": "Total",
+    "items": "{{count}} items"
+  }
+}

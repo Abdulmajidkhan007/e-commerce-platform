@@ -18,12 +18,16 @@ import uzShop from "./uz/shop.json";
 import enShop from "./en/shop.json";
 import ruShop from "./ru/shop.json";
 
+import uzCart from "./uz/cart.json";
+import enCart from "./en/cart.json";
+import ruCart from "./ru/cart.json";
+
 export const defaultNS = "common";
 
 export const resources = {
-  uz: { common: uzCommon, auth: uzAuth, profile: uzProfile, shop: uzShop },
-  en: { common: enCommon, auth: enAuth, profile: enProfile, shop: enShop },
-  ru: { common: ruCommon, auth: ruAuth, profile: ruProfile, shop: ruShop },
+  uz: { common: uzCommon, auth: uzAuth, profile: uzProfile, shop: uzShop, cart: uzCart },
+  en: { common: enCommon, auth: enAuth, profile: enProfile, shop: enShop, cart: enCart },
+  ru: { common: ruCommon, auth: ruAuth, profile: ruProfile, shop: ruShop, cart: ruCart },
 } as const;
 
 i18n
